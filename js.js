@@ -4,7 +4,7 @@ async function fetchXml(url) {
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     const response = await fetch(proxyUrl + url, {
       headers: {
-        Origin: "your-domain.com", // Zastąp 'your-domain.com' swoją domeną
+        Origin: "X-Requested-With", // Zastąp 'your-domain.com' swoją domeną
       },
     });
     const dataXml = await response.text(); // Pobieranie XML jako ciąg znaków
